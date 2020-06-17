@@ -6,6 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
-echo $product_id;
+$product = new CrushPersonalClass();
+$check = $product->customer_allowed_for($product_id);
+
+if($check){
+	$product->render_fitness_program($product_id);
+}
 
 get_footer();

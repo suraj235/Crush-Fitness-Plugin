@@ -10,7 +10,7 @@ function function_to_show_personal_product() {
 
 		$product = wc_get_product( $product_id );
 		$product_name = $product->get_name();
-		$url = "--> This would be the url";
+		$url = get_site_url() . "/fitness-program/" .$product_id ;
 		$content = $product_name;
 		$content .= $url;
 		return $content;

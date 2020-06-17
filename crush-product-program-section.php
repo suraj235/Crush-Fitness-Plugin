@@ -17,7 +17,6 @@ if(!defined('ABSPATH')){
 
 add_action('plugins_loaded', 'my_plugin_init');
 
-
 function my_plugin_init() {
 
 	if ( class_exists('WC_Order_Query') ) {
@@ -41,15 +40,13 @@ function wc_not_loaded() {
 	);
 }
 
-
 function crush_get_order_data(){
+
 	require_once(plugin_dir_path(__FILE__).'includes/CrushCustomerOrder.php');
 	require_once(plugin_dir_path(__FILE__).'includes/CrushPersonalClass.php');
+
 	require_once(plugin_dir_path(__FILE__).'shortcodes/shortcode_to_show_personal_fitness_programs.php');
-	require_once(plugin_dir_path(__FILE__).'woocommerce-locate-template.php');
+
 	require_once(plugin_dir_path(__FILE__).'register_virtual_endpoints.php');
+
 }
-
-
-
-
