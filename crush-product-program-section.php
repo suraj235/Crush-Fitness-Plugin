@@ -43,8 +43,9 @@ function wc_not_loaded() {
 
 
 function crush_get_order_data(){
-	require_once(plugin_dir_path(__FILE__).'includes/personal-fitness-plan-class.php');
-	$class = new PersonalFitnessClass();
+	require_once(plugin_dir_path(__FILE__).'includes/CrushCustomerOrder.php');
+	require_once(plugin_dir_path(__FILE__).'includes/CrushPersonalClass.php');
+	$product = new CrushPersonalClass();
 }
 
 
