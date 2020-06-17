@@ -46,6 +46,5 @@ function crush_get_order_data(){
 	require_once(plugin_dir_path(__FILE__).'includes/CrushCustomerOrder.php');
 	require_once(plugin_dir_path(__FILE__).'includes/CrushPersonalClass.php');
 	$product = new CrushPersonalClass();
+	$product->get_id_of_personal_product();
 }
-
-

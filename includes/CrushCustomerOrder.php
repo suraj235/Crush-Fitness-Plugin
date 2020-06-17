@@ -45,17 +45,22 @@ class CrushCustomerOrder {
 		return $this->product_ids;
 	}
 
-	public function get_product_id_of_category($category, $array) {
-		foreach ($array as $key => $val) {
-			if ($key == 'product_category'){
-				foreach ($array as $inner_key => $inner_val){
-					if ($inner_val['category'] === $category) {
-						return $key;
+	public function get_product_id_of_category($value, $arrays) {
+		// $product_category = array_column($arrays, 'product_category') ;
+		$return_data_of_product_ids = [];
+		foreach ($arrays as $arrayCount => $data ) {
+			foreach ($data as $product_key => $product_data) {
+				if ($product_key == 'product_category') {
+					if (in_array( $value , $product_data)) {
+						array_push($return_data_of_product_ids ,$data['product_id']);
 					}
-				}
-			}
 
+				}
+
+			}
 		}
-		return null;
+
+		return $return_data_of_product_ids;
 	}
 }
+

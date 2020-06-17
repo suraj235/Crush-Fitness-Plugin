@@ -2,14 +2,20 @@
 
 	class CrushPersonalClass extends CrushCustomerOrder {
 
-		public function __construct() {
-		$orders = new CrushCustomerOrder();
+		private $orders;
+		private $products;
 
-		$products = $orders->get_customer_products();
-		// var_dump($products['product_category']);
-		// $products->get_product_id_of_category('Personal Fitness', $products);
-			
-		$key = array_search('Personal Fitness', array_column($products, 'product_category'));
-		// var_dump($key);
+		public function __construct() {
+		$this->orders	= new CrushCustomerOrder();
+		$this->products = $this->orders->get_customer_products();
+
 		}
+
+
+		public function get_id_of_personal_product() {
+			$products = $this->products;
+			$orders = $this->orders;
+			return $orders->get_product_id_of_category('Personal Fitness', $products);
+		}
+
 	}
