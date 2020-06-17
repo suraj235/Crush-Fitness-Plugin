@@ -37,7 +37,7 @@ function my_plugin_init() {
 function wc_not_loaded() {
 	printf(
 		'<div class="error"><p>%s</p></div>',
-		__('Sorry cannot create coupon because WooCommerce is not loaded')
+		__('Sorry WooCommer is not detected')
 	);
 }
 
@@ -46,7 +46,10 @@ function crush_get_order_data(){
 	require_once(plugin_dir_path(__FILE__).'includes/CrushCustomerOrder.php');
 	require_once(plugin_dir_path(__FILE__).'includes/CrushPersonalClass.php');
 	require_once(plugin_dir_path(__FILE__).'shortcodes/shortcode_to_show_personal_fitness_programs.php');
-	 require_once(plugin_dir_path(__FILE__).'includes/register_program_section_endpoint.php');
+	require_once(plugin_dir_path(__FILE__).'woocommerce-locate-template.php');
+	require_once(plugin_dir_path(__FILE__).'register_virtual_endpoints.php');
 }
+
+
 
 
