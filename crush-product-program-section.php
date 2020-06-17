@@ -45,6 +45,8 @@ function wc_not_loaded() {
 function crush_get_order_data(){
 	require_once(plugin_dir_path(__FILE__).'includes/CrushCustomerOrder.php');
 	require_once(plugin_dir_path(__FILE__).'includes/CrushPersonalClass.php');
-	$product = new CrushPersonalClass();
-	$product->get_id_of_personal_product();
+	require_once(plugin_dir_path(__FILE__).'shortcodes/shortcode_to_show_personal_fitness_programs.php');
+	 require_once(plugin_dir_path(__FILE__).'includes/register_program_section_endpoint.php');
 }
+
+
