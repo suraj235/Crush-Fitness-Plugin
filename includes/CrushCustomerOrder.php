@@ -34,7 +34,6 @@ class CrushCustomerOrder {
 				$product_array['product_name'] = $item_name;
 				$product_array['product_id'] = $product_id;
 				$product_array['product_category'] = $categories;
-				$product_array['order_id'] = $order_id;
 				array_push($this->product_ids, $product_array);
 			endforeach;
 
