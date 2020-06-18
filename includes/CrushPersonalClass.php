@@ -92,7 +92,7 @@ class CrushPersonalClass extends CrushCustomerOrder {
 	}
 
 	private function get_video_data($program_id){
-		$relationship_slug = 'program-section-lecture' ;
+		$relationship_slug = 'program-section-video' ;
 		$video_ids = toolset_get_related_posts(
 			$program_id, //get posts related to this one
 			$relationship_slug, //relationship between the posts
