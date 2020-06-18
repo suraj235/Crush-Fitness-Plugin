@@ -42,12 +42,11 @@ echo $left_menu_mobile;
 
 			            ?>
 
-
                         <p>Videos</p>
 	                    <?php
 	                    foreach ($program['videos'] as $video){
 		                    ?>
-                            <p>Lesson id: <?php echo $video ?></p>
+                            <p>Video id: <?php echo $video ?></p>
 
 		                    <?php
 	                    }

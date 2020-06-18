@@ -81,20 +81,20 @@ class CrushPersonalClass extends CrushCustomerOrder {
 	}
 
 
-	private function get_lesson_data($progarm_id){
+	private function get_lesson_data($program_id){
 		$relationship_slug = 'program-section-lecture' ;
 		$lesson_ids = toolset_get_related_posts(
-			$progarm_id, //get posts related to this one
+			$program_id, //get posts related to this one
 			$relationship_slug, //relationship between the posts
 			['query_by_role' => 'parent']  //get relationship by role
 		);
 		return $lesson_ids;
 	}
 
-	private function get_video_data($progarm_id){
+	private function get_video_data($program_id){
 		$relationship_slug = 'program-section-lecture' ;
 		$video_ids = toolset_get_related_posts(
-			$progarm_id, //get posts related to this one
+			$program_id, //get posts related to this one
 			$relationship_slug, //relationship between the posts
 			['query_by_role' => 'parent']  //get relationship by role
 		);

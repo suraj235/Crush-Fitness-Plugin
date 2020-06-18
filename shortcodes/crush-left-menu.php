@@ -2,7 +2,7 @@
 
 
 // Put the code of your snippet below this comment.
-function left_menu($atts)
+function left_menu_v2($atts)
 {
 	$atts = shortcode_atts(
 		array(
