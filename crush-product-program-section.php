@@ -46,6 +46,7 @@ function crush_get_order_data(){
 	require_once(plugin_dir_path(__FILE__).'includes/CrushPersonalClass.php');
 
 	require_once(plugin_dir_path(__FILE__).'shortcodes/shortcode_to_show_personal_fitness_programs.php');
+	require_once(plugin_dir_path(__FILE__).'shortcodes/crush-left-menu.php');
 
 	require_once(plugin_dir_path(__FILE__).'register_virtual_endpoints.php');
 
